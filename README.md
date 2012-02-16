@@ -166,5 +166,5 @@ Create a file called _GetGraphOptions.java_ in _src/_ directory with content:
 Deploy the code to an application server and verify the output of
 http://hostname/ContextRoot/flotjfexample.html as:
 
-![](doc-files/flotjfexample.jpg)
+![](/dunse/FlotJF/raw/master/src/main/java/doc-files/flotjfexample.jpg)
 
