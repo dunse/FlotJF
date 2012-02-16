@@ -1,0 +1,146 @@
+<html>
+<body>
+<i>Please note this javadoc have been put together based on documentation found here: <a href="http://people.iola.dk/olau/flot/API.txt">http://people.iola.dk/olau/flot/API.txt</a></i>
+<h1>Building</h1>
+<b>Dependencies:</b>
+Maven 2+<br/>
+<br/>
+<b>Setup workspace:</b>
+<pre>
+git clone git@github.com:dunse/FlotJF.git
+</pre>
+<b>Build FlotJF</b>
+<pre>cd FlotJF
+mvn package</pre>
+This will create the compiled jar under <i>target</i> directory.
+<h1>Usage</h1>
+<b>Dependencies:</b><br/>
+FlotJF is dependent on GSON which can be found <a href="http://code.google.com/p/google-gson/downloads/list" target="_blank">here</a>. (JAR file is found inside google-gson-X.X-release.zip)<br/>
+Flot is required to draw the graphs. Download Flot from <a href="http://code.google.com/p/flot/downloads/list" target="_blank">here</a> and unzip into WebContent/javascripts/.<br/>
+<br/>
+<b>Setup:</b><br/>
+Copy <i>FlotJF/target/FlotJF-*.jar</i> into <i>WEB-INF/lib/</i> of your web project.<br/>
+Make sure <i>GSON .jar</i> has been included in <i>WEB-INF/lib/</i>. (See dependencies)<br/>
+Make sure <i>jquery.flot.js</i> can be found in <i>WebContent/javascripts/flot/</i><br/>
+<h3>Example</h3>
+Create a file called <i>flotjfexample.html</i> in <i>WebContent/</i> directory with content:<br/>
+<pre style="background-color: #eeeeee; padding: 5px">
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;FlotJF Example&lt;/title&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;!--[if lte IE 8]&gt;&lt;script src=&quot;javascripts/flot/excanvas.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;&lt;![endif]--&gt;
+&lt;script src=&quot;javascripts/flot/jquery.flot.js&quot; type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;placeholder&quot; style=&quot;width:95%;height:400px;&quot; &gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+&lt;!--
+    // setup plot
+    var options = [];
+    var data = [];
+
+	$.ajaxSetup({async:false});
+    $.post('GetGraphOptions',{},
+			function(response) {
+    			options = response
+				} )
+    $.post('GetGraph',{},
+	    	function(response) {
+	    		data = response
+	    		} )
+	var plot = $.plot($(&quot;#placeholder&quot;), data, options);
+    plot.setupGrid();
+	plot.draw();
+    $.ajaxSetup({async:true});
+//--&gt;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+Create a file called <i>GetGraph.java</i> in <i>src/</i> directory with content:
+<pre style="background-color: #eeeeee; padding: 5px">
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import flotjf.Chart;
+import flotjf.data.PlotData;
+
+/**
+ * Servlet implementation class GetGraph
+ */
+&#64;WebServlet(&quot;/GetGraph&quot;)
+public class GetGraph extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType(&quot;application/json&quot;);
+		PrintWriter out = response.getWriter();
+
+		PlotData sinPlot = new PlotData(&quot;sin(x)&quot;, null);
+		
+		int i = 0;
+		while( i++ &lt; 100 ) {
+			sinPlot.addPoint(i, Math.sin(i));
+		}
+	
+		Chart chart = new Chart();
+		chart.addElements(sinPlot);
+
+		out.println(chart.printChart());
+		out.close();
+	}
+
+}
+</pre>
+Create a file called <i>GetGraphOptions.java</i> in <i>src/</i> directory with content:
+<pre style="background-color: #eeeeee; padding: 5px">
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import flotjf.Chart;
+import flotjf.options.Axis;
+
+/**
+ * Servlet implementation class GetGraphOptions
+ */
+&#64;WebServlet(&quot;/GetGraphOptions&quot;)
+public class GetGraphOptions extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType(&quot;application/json&quot;);
+		PrintWriter out = response.getWriter();
+
+		Chart chart = new Chart();
+	
+		Axis yAxis = new Axis();
+		chart.addYAxis(yAxis);
+	
+		Axis xAxis = new Axis();
+		chart.addXAxis(xAxis);
+
+		out.println(chart.printChartOptions());
+		out.close();
+	}
+
+}
+</pre>
+Deploy the code to an application server and verify the output of <a href="#">http://hostname/ContextRoot/flotjfexample.html</a> as:<br/>
+<img src="doc-files/flotjfexample.jpg"/>
+</body>
+</html>
