@@ -36,7 +36,7 @@ Make sure _jquery.flot.js_ can be found in _WebContent/javascripts/flot/_
 
 ### Example
 
-Find a set of examples in this web project: (https://github.com/dunse/FlotJFExamplesWeb)[https://github.com/dunse/FlotJFExamplesWeb]
+Find a set of examples in this web project: [https://github.com/dunse/FlotJFExamplesWeb](https://github.com/dunse/FlotJFExamplesWeb)
 Or use the step by step guide below.
 
 Create a file called _flotjfexample.html_ in _WebContent/_ directory with
