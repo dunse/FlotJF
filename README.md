@@ -16,7 +16,7 @@ Maven 2+
 **Setup workspace:**
     
     
-    git clone git@github.com:dunse/FlotJF.git
+    git clone git://github.com/dunse/FlotJF.git
     
 
 **Build FlotJF**
