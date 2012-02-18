@@ -1,9 +1,17 @@
+# About
+This is a Java Framework for [Flot](http://code.google.com/p/google-gson/downloads/list).
+
+Its main purpose is to simplify backend coding for generating graphs using Flot.
+
+
 _Please note this javadoc have been put together based on documentation found
 here: [http://people.iola.dk/olau/flot/API.txt](http://people.iola.dk/olau/flot/API.txt)_
 
 # Building
 
-**Dependencies:** Maven 2+  
+**Dependencies:**
+
+Maven 2+  
   
 **Setup workspace:**
     
@@ -30,14 +38,17 @@ Flot is required to draw the graphs. Download Flot from
 **Setup:**  
 Copy _FlotJF/target/FlotJF-*.jar_ into _WEB-INF/lib/_ of your web project.
 
-Make sure _GSON .jar_ has been included in _WEB-INF/lib/_. (See dependencies)
+Make sure _GSON's .jar_ has been included in _WEB-INF/lib/_. (See dependencies)
 
 Make sure _jquery.flot.js_ can be found in _WebContent/javascripts/flot/_
 
-### Example
+## Examples
 
-Find a set of examples in this web project: [https://github.com/dunse/FlotJFExamplesWeb](https://github.com/dunse/FlotJFExamplesWeb)
-Or use the step by step guide below.
+Find a set of examples in the FlotJFExamplesWeb project: [https://github.com/dunse/FlotJFExamplesWeb](https://github.com/dunse/FlotJFExamplesWeb)
+
+Or use the step by step guide below to quickly get started.
+
+### Step-by-step Example
 
 Create a file called _flotjfexample.html_ in _WebContent/_ directory with
 content:
