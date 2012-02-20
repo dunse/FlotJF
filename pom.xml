@@ -66,6 +66,5 @@ Its main purpose is to simplify backend coding for generating graphs using Flot.
 	<scm>
 		<connection>scm:git:git://github.com/dunse/FlotJF.git</connection>
 		<url>http://github.com/dunse/FlotJF</url>
-		<tag>master</tag>
 	</scm>
 </project>
