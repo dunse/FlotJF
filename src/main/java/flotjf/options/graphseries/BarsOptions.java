@@ -11,7 +11,7 @@ package flotjf.options.graphseries;
  * }
  * </pre>
  */
-public final class BarsOptions extends SeriesOptions {
+public class BarsOptions extends SeriesOptions {
 	/** */
 	private Integer barWidth;
 	/** */

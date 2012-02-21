@@ -9,7 +9,7 @@ package flotjf.options.graphseries;
  * }
  * </pre>
  */
-public final class PointsOptions extends SeriesOptions {
+public class PointsOptions extends SeriesOptions {
 	/** */
 	private Integer radius;
 	/** */

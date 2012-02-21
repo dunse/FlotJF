@@ -63,25 +63,35 @@ public class Series {
 	private BarsOptions bars;
 	/** */
 	private Integer shadowSize;
+
 	/**
 	 * @param lines the lines to set
 	 * @see LinesOptions
 	 */
-	public final void setLines(final LinesOptions lines) {
+	public void setLines(final LinesOptions lines) {
 		this.lines = lines;
 	}
+
 	/**
 	 * @param points the points to set
 	 * @see PointsOptions
 	 */
-	public final void setPoints(final PointsOptions points) {
+	public void setPoints(final PointsOptions points) {
 		this.points = points;
 	}
+
+	/**
+	 * @return the points
+	 */
+	public PointsOptions getPoints() {
+		return points;
+	}
+
 	/**
 	 * @param bars the bars to set
 	 * @see BarsOptions
 	 */
-	public final void setBars(final BarsOptions bars) {
+	public void setBars(final BarsOptions bars) {
 		this.bars = bars;
 	}
 	/**
@@ -90,8 +100,16 @@ public class Series {
 	 *
 	 * @param shadowSize the shadowSize to set
 	 */
-	public final void setShadowSize(final Integer shadowSize) {
+	public void setShadowSize(final Integer shadowSize) {
 		this.shadowSize = shadowSize;
+	}
+
+
+	/**
+	 * @return the shadowSize
+	 */
+	public Integer getShadowSize() {
+		return shadowSize;
 	}
 
 	/**
@@ -100,7 +118,7 @@ public class Series {
 	 * @param lineWidth TODO
 	 * @param radius TODO
 	 */
-	public final void setPointOptions(final Integer lineWidth, final Integer radius) {
+	public void setPointOptions(final Integer lineWidth, final Integer radius) {
 		if (points == null) {
 			this.points = new PointsOptions();
 		}
@@ -113,7 +131,7 @@ public class Series {
 	 * Helper method to set Point options.
 	 *
 	 */
-	public final void setPointOptions() {
+	public void setPointOptions() {
 		setPointOptions(null, null);
 	}
 
@@ -123,7 +141,7 @@ public class Series {
 	 * @param lineWidth TODO
 	 * @param fillColor TODO
 	 */
-	public final void setLineOptions(final Integer lineWidth, final String fillColor) {
+	public void setLineOptions(final Integer lineWidth, final String fillColor) {
 		if (lines == null) {
 			this.lines = new LinesOptions();
 		}
@@ -140,14 +158,21 @@ public class Series {
 	 *
 	 * @param lineWidth TODO
 	 */
-	public final void setLineOptions(final Integer lineWidth) {
+	public void setLineOptions(final Integer lineWidth) {
 		setLineOptions(lineWidth, null);
+	}
+
+	/**
+	 * @return the lines
+	 */
+	public LinesOptions getLines() {
+		return lines;
 	}
 
 	/**
 	 * Helper method to set Line options.
 	 */
-	public final void setLineOptions() {
+	public void setLineOptions() {
 		setLineOptions(null, null);
 	}
 
@@ -157,7 +182,7 @@ public class Series {
 	 * @param lineWidth TODO
 	 * @param fillColor TODO
 	 */
-	public final void setBarOptions(final Integer lineWidth, final String fillColor) {
+	public void setBarOptions(final Integer lineWidth, final String fillColor) {
 		if (bars == null) {
 			this.bars = new BarsOptions();
 		}
@@ -170,35 +195,16 @@ public class Series {
 	}
 
 	/**
-	 * Helper method to set Bar options.
-	 */
-	public final void setBarOptions() {
-		setBarOptions(null, null);
-	}
-
-	/**
-	 * @return the lines
-	 */
-	public final LinesOptions getLines() {
-		return lines;
-	}
-	/**
-	 * @return the points
-	 */
-	public final PointsOptions getPoints() {
-		return points;
-	}
-	/**
 	 * @return the bars
 	 */
-	public final BarsOptions getBars() {
+	public BarsOptions getBars() {
 		return bars;
 	}
-	/**
-	 * @return the shadowSize
-	 */
-	public final Integer getShadowSize() {
-		return shadowSize;
-	}
 
+	/**
+	 * Helper method to set Bar options.
+	 */
+	public void setBarOptions() {
+		setBarOptions(null, null);
+	}
 }

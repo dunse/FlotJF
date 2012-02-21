@@ -66,7 +66,7 @@ package flotjf.options.plugins;
  * "plotselected" event. If there's currently no selection, the
  * function returns null.
  */
-public final class Selection {
+public class Selection {
 	/** */
 	private String mode;
 	/** */

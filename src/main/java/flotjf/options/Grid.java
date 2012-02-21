@@ -68,7 +68,7 @@ package flotjf.options;
  * This class has been constructed as per flot API documentation.
  * @see <A href="http://flot.googlecode.com/svn/trunk/API.txt" target="_blank">Flot API.txt</A>
  */
-public final class Grid {
+public class Grid {
 	/** */
 	private Boolean show;
 	/** */

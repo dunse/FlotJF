@@ -11,7 +11,7 @@ package flotjf.options.plugins;
  * }
  * </pre>
  */
-public final class CrossHair {
+public class CrossHair {
 	/** */
 	private String mode;
 	/** */

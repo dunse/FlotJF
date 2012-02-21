@@ -8,7 +8,7 @@ package flotjf.options.graphseries;
  * }
  * </pre>
  */
-public final class LinesOptions extends SeriesOptions {
+public class LinesOptions extends SeriesOptions {
 	/** */
 	private Boolean steps;
 

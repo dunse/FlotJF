@@ -27,14 +27,14 @@ public class SeriesOptions {
 	/**
 	 * @param show the show to set
 	 */
-	public final void setShow(final Boolean show) {
+	public void setShow(final Boolean show) {
 		this.show = show;
 	}
 
 	/**
 	 * @return the show
 	 */
-	public final Boolean getShow() {
+	public Boolean getShow() {
 		return show;
 	}
 
@@ -45,14 +45,14 @@ public class SeriesOptions {
 	 * <p>
 	 * @param lineWidth the lineWidth to set
 	 */
-	public final void setLineWidth(final Integer lineWidth) {
+	public void setLineWidth(final Integer lineWidth) {
 		this.lineWidth = lineWidth;
 	}
 
 	/**
 	 * @return the lineWidth
 	 */
-	public final Integer getLineWidth() {
+	public Integer getLineWidth() {
 		return lineWidth;
 	}
 
@@ -62,14 +62,14 @@ public class SeriesOptions {
 	 * <p>
 	 * @param fill the fill to set
 	 */
-	public final void setFill(final String fill) {
+	public void setFill(final String fill) {
 		this.fill = fill;
 	}
 
 	/**
 	 * @return the fill
 	 */
-	public final String getFill() {
+	public String getFill() {
 		return fill;
 	}
 
@@ -83,14 +83,14 @@ public class SeriesOptions {
 	 * <p>
 	 * @param fillColor the fillColor to set
 	 */
-	public final void setFillColor(final String fillColor) {
+	public void setFillColor(final String fillColor) {
 		this.fillColor = fillColor;
 	}
 
 	/**
 	 * @return the fillColor
 	 */
-	public final String getFillColor() {
+	public String getFillColor() {
 		return fillColor;
 	}
 }

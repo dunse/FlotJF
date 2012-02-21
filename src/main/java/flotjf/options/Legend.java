@@ -19,7 +19,7 @@ package flotjf.options;
  * }
  * </pre>
  */
-public final class Legend {
+public class Legend {
 	/** */
 	private Boolean show;
 	/** */

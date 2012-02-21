@@ -15,7 +15,7 @@ import flotjf.options.plugins.CrossHair;
  * @author PJ
  *
  */
-public final class Chart {
+public class Chart {
 	/** */
 	private ArrayList<PlotData> chartsdata;
 	/** */

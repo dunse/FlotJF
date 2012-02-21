@@ -57,7 +57,7 @@ import flotjf.options.graphseries.PointsOptions;
  * This class has been constructed as per flot API documentation.
  * @see <A href="http://flot.googlecode.com/svn/trunk/API.txt" target="_blank">Flot API.txt</A>
  */
-public final class PlotData extends Series {
+public class PlotData extends Series {
 	/** */
 	private String color = null;
 	/** */
