@@ -31,6 +31,10 @@ public class PlotOptions {
 		yaxes = new ArrayList<Axis>();
 	}
 
+	public PlotOptions(Object o) {
+		// Dummy constructor to prevent initialisation of x/yaxes
+	}
+
 	/**
 	 *
 	 * @param xAxis TODO
