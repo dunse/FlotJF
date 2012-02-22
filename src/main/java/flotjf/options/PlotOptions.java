@@ -35,7 +35,7 @@ public class PlotOptions {
 	 *
 	 * @param xAxis TODO
 	 */
-	public final void addXAxis(final Axis xAxis) {
+	public void addXAxis(final Axis xAxis) {
 		this.xaxes.add(xAxis);
 	}
 
@@ -43,7 +43,7 @@ public class PlotOptions {
 	 *
 	 * @param yAxis TODO
 	 */
-	public final void addYAxis(final Axis yAxis) {
+	public void addYAxis(final Axis yAxis) {
 		this.yaxes.add(yAxis);
 	}
 
@@ -51,7 +51,7 @@ public class PlotOptions {
 	 *
 	 * @param grid TODO
 	 */
-	public final void setGrid(final Grid grid) {
+	public void setGrid(final Grid grid) {
 		this.grid = grid;
 	}
 
@@ -59,7 +59,7 @@ public class PlotOptions {
 	 *
 	 * @param crosshair TODO
 	 */
-	public final void setCrossHair(final CrossHair crosshair) {
+	public void setCrossHair(final CrossHair crosshair) {
 		this.crosshair = crosshair;
 	}
 
@@ -67,7 +67,7 @@ public class PlotOptions {
 	 *
 	 * @param selection TODO
 	 */
-	public final void setSelection(final Selection selection) {
+	public void setSelection(final Selection selection) {
 		this.selection = selection;
 	}
 
@@ -75,7 +75,7 @@ public class PlotOptions {
 	 *
 	 * @return TODO
 	 */
-	public final Grid getGrid() {
+	public Grid getGrid() {
 		return this.grid;
 	}
 
@@ -83,14 +83,14 @@ public class PlotOptions {
 	 *
 	 * @return TODO
 	 */
-	public final CrossHair getCrossHair() {
+	public CrossHair getCrossHair() {
 		return crosshair;
 	}
 
 	/**
 	 * @return the selection
 	 */
-	public final Selection getSelection() {
+	public Selection getSelection() {
 		return selection;
 	}
 }
