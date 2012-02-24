@@ -22,7 +22,7 @@ public class SeriesOptions {
 	/** */
 	private String fill;
 	/** */
-	private String fillColor;
+	private Object fillColor;
 
 	/**
 	 * @param show the show to set
@@ -83,14 +83,14 @@ public class SeriesOptions {
 	 * <p>
 	 * @param fillColor the fillColor to set
 	 */
-	public void setFillColor(final String fillColor) {
+	public void setFillColor(final Object fillColor) {
 		this.fillColor = fillColor;
 	}
 
 	/**
 	 * @return the fillColor
 	 */
-	public String getFillColor() {
+	public Object getFillColor() {
 		return fillColor;
 	}
 }

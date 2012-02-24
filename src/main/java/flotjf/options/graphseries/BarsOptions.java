@@ -13,7 +13,7 @@ package flotjf.options.graphseries;
  */
 public class BarsOptions extends SeriesOptions {
 	/** */
-	private Integer barWidth;
+	private Double barWidth;
 	/** */
 	private String align;
 	/** */
@@ -28,14 +28,14 @@ public class BarsOptions extends SeriesOptions {
 	 * <p>
 	 * @param barWidth the barWidth to set
 	 */
-	public void setBarWidth(final Integer barWidth) {
+	public void setBarWidth(final Double barWidth) {
 		this.barWidth = barWidth;
 	}
 
 	/**
 	 * @return the barWidth
 	 */
-	public Integer getBarWidth() {
+	public Double getBarWidth() {
 		return barWidth;
 	}
 

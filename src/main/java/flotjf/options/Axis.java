@@ -193,11 +193,11 @@ public class Axis {
 	private String font = null;
 
 	/** */
-	private Long min = null;
+	private Double min = null;
 	/** */
-	private Long max = null;
+	private Double max = null;
 	/** */
-	private Long autoscaleMargin = null;
+	private Double autoscaleMargin = null;
 
 	/** */
 	private String transform = null;
@@ -267,7 +267,7 @@ public class Axis {
 	 * @param max null or number
 	 * @param tickSize number
 	 */
-	public void setRange(final Long min, final Long max, final Long tickSize) {
+	public void setRange(final Double min, final Double max, final Double tickSize) {
 		setMin(min);
 		setMax(max);
 		if (tickSize != null) {
@@ -280,7 +280,7 @@ public class Axis {
 	 * @param min null or number
 	 * @param max null or number
 	 */
-	public void setRange(final Long min, final Long max) {
+	public void setRange(final Double min, final Double max) {
 		setRange(min, max, null);
 	}
 
@@ -346,7 +346,7 @@ public class Axis {
 	 * @see #setRange
 	 * @param min null or number
 	 */
-	public void setMin(final Long min) {
+	public void setMin(final Double min) {
 		this.min = min;
 	}
 
@@ -354,7 +354,7 @@ public class Axis {
 	 * @see #setRange
 	 * @param max null or number
 	 */
-	public void setMax(final Long max) {
+	public void setMax(final Double max) {
 		this.max = max;
 	}
 
@@ -369,7 +369,7 @@ public class Axis {
 	 * <p>
 	 * @param autoscaleMargin null or number
 	 */
-	public void setAutoscaleMargin(final Long autoscaleMargin) {
+	public void setAutoscaleMargin(final Double autoscaleMargin) {
 		this.autoscaleMargin = autoscaleMargin;
 	}
 
@@ -646,21 +646,21 @@ public class Axis {
 	/**
 	 * @return the min
 	 */
-	public Long getMin() {
+	public Double getMin() {
 		return min;
 	}
 
 	/**
 	 * @return the max
 	 */
-	public Long getMax() {
+	public Double getMax() {
 		return max;
 	}
 
 	/**
 	 * @return the autoscaleMargin
 	 */
-	public Long getAutoscaleMargin() {
+	public Double getAutoscaleMargin() {
 		return autoscaleMargin;
 	}
 
