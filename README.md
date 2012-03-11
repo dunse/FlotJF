@@ -1,5 +1,5 @@
 # About
-This is a Java Framework for [Flot](http://code.google.com/p/google-gson/downloads/list).
+This is a Java Framework for [Flot](http://code.google.com/p/flot/).
 
 Its main purpose is to simplify backend coding for generating graphs using Flot.
 
